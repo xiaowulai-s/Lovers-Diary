@@ -1,25 +1,72 @@
 {
   "expo": {
-    "name": "lovers-diary",
+    "name": "爱苏日记",
     "slug": "lovers-diary",
-    "version": "1.0.0",
+    "version": "1.2.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
+    "scheme": "loversdiary",
     "userInterfaceStyle": "light",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.loversdiary.app"
     },
     "android": {
+      "package": "com.loversdiary.app",
+      "versionCode": 4,
+      "predictiveBackGestureEnabled": false,
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
-      },
-      "predictiveBackGestureEnabled": false
+        "backgroundColor": "#B7E5FC",
+        "foregroundImage": "./assets/android-icon-foreground.png"
+      }
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
+    "plugins": [
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#FBF7F1",
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 132,
+          "resizeMode": "contain"
+        }
+      ],
+      "expo-font",
+      "expo-image",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "允许爱苏日记读取你们选中的照片，用于私密相册。",
+          "cameraPermission": "允许爱苏日记使用相机记录当下的照片。",
+          "microphonePermission": false
+        }
+      ],
+      "expo-secure-store",
+      "expo-sharing",
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "允许爱苏日记使用面容 ID 保护你们的私密空间。"
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/android-icon-monochrome.png",
+          "color": "#B05E55"
+        }
+      ]
+    ],
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "a7579d69-8d12-40ed-a0be-13c9d00c6cae"
+      }
+    },
+    "owner": "hou123454321",
+    "updates": {
+      "url": "https://u.expo.dev/a7579d69-8d12-40ed-a0be-13c9d00c6cae"
     }
   }
 }
